@@ -10,7 +10,7 @@
             Padding="30,0"
             VerticalOptions="Center">
             
-            <Label></Label>
+            <Entry x:Name="Input" Placeholder="Input your name:" WidthRequest="200"></Entry>
             <Button Text="Week03" WidthRequest="200" Clicked="OnButtonClicked" />
 
         </VerticalStackLayout>

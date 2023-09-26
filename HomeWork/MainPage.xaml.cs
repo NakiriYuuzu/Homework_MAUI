@@ -9,6 +9,6 @@ public partial class MainPage : ContentPage
 
     private void OnButtonClicked(object sender, EventArgs args)
     {
-        Navigation.PushAsync(new Week3());
+        Navigation.PushAsync(new Week3(Input.Text));
     }
 }
