@@ -5,7 +5,7 @@ namespace HomeWork.Week03;
 
 public class Week3ViewModel: ObservableObject
 {
-    string[] _fruitNames = {
+    readonly string[] _fruitNames = {
         "Apple", "Apricot", "Banana", "Coconut", "Grape", "Guava", "Kiwi", "Mango",
         "Melon", "Orange", "Peach", "Pear", "Pineapple", "Plum", "Pomegranate", "Strawberry", "Watermelon"
     };

@@ -28,7 +28,10 @@
                        FontAttributes="Bold"
                        HorizontalOptions="CenterAndExpand" />
                 <!-- Card 1, Row 1 -->
-                <Frame Grid.Row="1" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Frame Grid.Row="1" Grid.Column="0">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Frame_Tapped" CommandParameter="numbers" />
+                    </Frame.GestureRecognizers>
                     <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                         <Image Source="abc.png" />
                         <Label Text="Numbers"
@@ -38,6 +41,9 @@
                 </Frame>
                 <!-- Card 2, Row 1 -->
                 <Frame Grid.Row="1" Grid.Column="2">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Frame_Tapped" CommandParameter="letters" />
+                    </Frame.GestureRecognizers>
                     <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                         <Image Source="abc.png" />
                         <Label Text="Letters"
@@ -47,6 +53,9 @@
                 </Frame>
                 <!-- Card 1, Row 2 -->
                 <Frame Grid.Row="2" Grid.Column="0">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Frame_Tapped" CommandParameter="shapes" />
+                    </Frame.GestureRecognizers>
                     <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                         <Image Source="shapes.png" />
                         <Label Text="Shapes"
@@ -56,6 +65,9 @@
                 </Frame>
                 <!-- Card 2, Row 2 -->
                 <Frame Grid.Row="2" Grid.Column="2">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Frame_Tapped" CommandParameter="colors" />
+                    </Frame.GestureRecognizers>
                     <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                         <Image Source="color.png" />
                         <Label Text="Colors"
@@ -65,6 +77,9 @@
                 </Frame>
                 <!-- Card 1, Row 3 -->
                 <Frame Grid.Row="3" Grid.Column="0">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Frame_Tapped" CommandParameter="fruits" />
+                    </Frame.GestureRecognizers>
                     <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                         <Image Source="fruits.png" />
                         <Label Text="Fruits"
@@ -74,6 +89,9 @@
                 </Frame>
                 <!-- Card 2, Row 3 -->
                 <Frame Grid.Row="3" Grid.Column="2">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Frame_Tapped" CommandParameter="animals" />
+                    </Frame.GestureRecognizers>
                     <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                         <Image Source="animal.png" />
                         <Label Text="Animals"
