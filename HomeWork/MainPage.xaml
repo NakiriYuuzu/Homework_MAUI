@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             Title="登入"
+             Title="主畫面"
              x:Class="HomeWork.MainPage">
 
     <ScrollView>
@@ -9,9 +9,9 @@
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
-            
-            <Entry x:Name="Input" Placeholder="Input your name:" WidthRequest="200"></Entry>
-            <Button Text="Week03" WidthRequest="200" Clicked="OnButtonClicked" />
+            <!-- <Entry x:Name="Input" Placeholder="Input your name:" WidthRequest="200"></Entry> -->
+            <Button Text="Week03" WidthRequest="200" Clicked="OnButtonClicked" CommandParameter="week03" />
+            <Button Text="Week04" WidthRequest="200" Clicked="OnButtonClicked" CommandParameter="week04" />
 
         </VerticalStackLayout>
     </ScrollView>

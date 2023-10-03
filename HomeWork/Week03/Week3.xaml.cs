@@ -1,23 +1,22 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HomeWork.ViewModels;
-
-namespace HomeWork;
+namespace HomeWork.Week03;
 
 public partial class Week3 : ContentPage
 {
-    public Week3(string name)
+    public Week3()
     {
         InitializeComponent();
         BindingContext = new Week3ViewModel();
-        ShowName.Text = name;
     }
 
     private void OnTapGestureRecognizerTapped(object sender, TappedEventArgs tappedEventArgs)
     {
         Navigation.PopAsync();
+    }
+
+    private void OnItemTapped(object sender, TappedEventArgs e)
+    {
+        var frame = sender as Frame;
+        var fruit = frame?.BindingContext as Fruit;
+        Navigation.PushAsync(new Week03Detail(fruit));
     }
 }

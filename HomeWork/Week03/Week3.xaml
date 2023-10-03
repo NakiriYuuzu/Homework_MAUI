@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Week3"
+             x:DataType="week03:Week3ViewModel"
+             xmlns:week03="clr-namespace:HomeWork.Week03"
+             x:Class="HomeWork.Week03.Week3">
+    <ContentPage.Content>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            HorizontalOptions="Start"
+            VerticalOptions="Center">
+            
+            <Label Text="x" Margin="16" Padding="16" FontSize="24">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        NumberOfTapsRequired="1"
+                        Tapped="OnTapGestureRecognizerTapped" />
+                </Label.GestureRecognizers>
+            </Label>
+            <CollectionView ItemsSource="{Binding FruitsList}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="week03:Fruit">
+                        <Frame BackgroundColor="White" Padding="10" CornerRadius="16" HeightRequest="100" HasShadow="True">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnItemTapped"/>
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <!-- 圓角圖像 -->
+                                <Image Grid.Column="0" Source="{Binding Image}" WidthRequest="80" HeightRequest="80">
+                                    <Image.Clip>
+                                        <EllipseGeometry Center="40,40" RadiusX="40" RadiusY="40"/>
+                                    </Image.Clip>
+                                </Image>
+
+                                <!-- 文字部分 -->
+                                <StackLayout Grid.Column="1" VerticalOptions="Center">
+                                    <!-- 突出顯示名稱 -->
+                                    <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="Large" TextColor="DarkBlue"/>
+                                    <!-- 優化描述 -->
+                                    <Label Text="{Binding Description}" FontSize="Small" TextColor="Gray"/>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>

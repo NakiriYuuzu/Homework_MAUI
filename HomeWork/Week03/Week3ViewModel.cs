@@ -1,8 +1,7 @@
 using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
-using HomeWork.Models;
 
-namespace HomeWork.ViewModels;
+namespace HomeWork.Week03;
 
 public class Week3ViewModel: ObservableObject
 {

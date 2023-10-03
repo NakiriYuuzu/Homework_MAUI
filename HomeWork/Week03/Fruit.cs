@@ -1,6 +1,6 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace HomeWork.Models;
+namespace HomeWork.Week03;
 
 public class Fruit : ObservableObject
 {
