@@ -10,45 +10,51 @@
         <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
-            HorizontalOptions="Start"
+            HorizontalOptions="FillAndExpand"
             VerticalOptions="Center">
-            
-            <Label Text="x" Margin="16" Padding="16" FontSize="24">
+
+            <!-- Added text alignment for Label -->
+            <Label Text="x" Margin="16" Padding="16" FontSize="24"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer
                         NumberOfTapsRequired="1"
                         Tapped="OnTapGestureRecognizerTapped" />
                 </Label.GestureRecognizers>
             </Label>
+
             <CollectionView ItemsSource="{Binding FruitsList}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="week03:Fruit">
-                        <Frame BackgroundColor="White" Padding="10" CornerRadius="16" HeightRequest="100" HasShadow="True">
+                        <Frame BackgroundColor="White" Padding="10" CornerRadius="16" HeightRequest="100"
+                               HasShadow="True">
                             <Frame.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnItemTapped"/>
+                                <TapGestureRecognizer Tapped="OnItemTapped" />
                             </Frame.GestureRecognizers>
-                            <Grid>
+                            <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="100"/>
-                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100" />
+                                    <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
 
                                 <!-- 圓角圖像 -->
                                 <Image Grid.Column="0" Source="{Binding Image}" WidthRequest="80" HeightRequest="80">
                                     <Image.Clip>
-                                        <EllipseGeometry Center="40,40" RadiusX="40" RadiusY="40"/>
+                                        <EllipseGeometry Center="40,40" RadiusX="40" RadiusY="40" />
                                     </Image.Clip>
                                 </Image>
 
                                 <!-- 文字部分 -->
-                                <StackLayout Grid.Column="1" VerticalOptions="Center">
+                                <StackLayout Grid.Column="1" VerticalOptions="CenterAndExpand"
+                                             HorizontalOptions="CenterAndExpand">
                                     <!-- 突出顯示名稱 -->
-                                    <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="Large" TextColor="DarkBlue"/>
+                                    <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="Large"
+                                           TextColor="DarkBlue" />
                                     <!-- 優化描述 -->
-                                    <Label Text="{Binding Description}" FontSize="Small" TextColor="Gray"/>
+                                    <Label Text="{Binding Description}" FontSize="Small" TextColor="Gray" />
                                 </StackLayout>
                             </Grid>
                         </Frame>
@@ -56,5 +62,6 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </VerticalStackLayout>
+
     </ContentPage.Content>
 </ContentPage>
