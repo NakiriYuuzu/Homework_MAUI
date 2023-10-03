@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Week04"
+             x:Class="HomeWork.Week04.Week04">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid RowSpacing="16" ColumnSpacing="16">
+                <!-- Row Definitions -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <!-- Column Definitions -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="16" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <!-- Title -->
+                <Label Text="Title"
+                       Grid.Row="0"
+                       Grid.ColumnSpan="3"
+                       HorizontalOptions="CenterAndExpand" />
+                <!-- Card 1, Row 1 -->
+                <Frame Grid.Row="1" Grid.Column="0">
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                        <Image Source="abc.png" />
+                        <Label Text="Title" />
+                    </StackLayout>
+                </Frame>
+                <!-- Card 2, Row 1 -->
+                <Frame Grid.Row="1" Grid.Column="2">
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                        <Image Source="abc.png" />
+                        <Label Text="Title" />
+                    </StackLayout>
+                </Frame>
+                <!-- Card 1, Row 2 -->
+                <Frame Grid.Row="2" Grid.Column="0">
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                        <Image Source="shapes.png" />
+                        <Label Text="Title" />
+                    </StackLayout>
+                </Frame>
+                <!-- Card 2, Row 2 -->
+                <Frame Grid.Row="2" Grid.Column="2">
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                        <Image Source="color.png" />
+                        <Label Text="Title" />
+                    </StackLayout>
+                </Frame>
+                <!-- Card 1, Row 3 -->
+                <Frame Grid.Row="3" Grid.Column="0">
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                        <Image Source="fruits.png" />
+                        <Label Text="Title" />
+                    </StackLayout>
+                </Frame>
+                <!-- Card 2, Row 3 -->
+                <Frame Grid.Row="3" Grid.Column="2">
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                        <Image Source="animal.png" />
+                        <Label Text="Title" />
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
