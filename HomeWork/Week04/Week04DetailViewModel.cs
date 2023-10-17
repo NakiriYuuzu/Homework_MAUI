@@ -81,12 +81,15 @@ public class Week04DetailViewModel : ObservableObject
                 LearningList.Add(new LearningItem(name: "Banana", image: "banana.png"));
                 LearningList.Add(new LearningItem(name: "Orange", image: "orange.png"));
                 LearningList.Add(new LearningItem(name: "Strawberry", image: "strawberry.png"));
-                LearningList.Add(new LearningItem(name: "Grape", image: "grape.png"));
-                LearningList.Add(new LearningItem(name: "Lemon", image: "lemon.png"));
+                LearningList.Add(new LearningItem(name: "Mongo", image: "mongo.png"));
+                LearningList.Add(new LearningItem(name: "Kiwi", image: "kiwi.png"));
                 LearningList.Add(new LearningItem(name: "Watermelon", image: "watermelon.png"));
-                LearningList.Add(new LearningItem(name: "Mango", image: "mango.png"));
-                LearningList.Add(new LearningItem(name: "Cherry", image: "cherry.png"));
+                LearningList.Add(new LearningItem(name: "Grapes", image: "grapes.png"));
                 LearningList.Add(new LearningItem(name: "Pineapple", image: "pineapple.png"));
+                LearningList.Add(new LearningItem(name: "Coconut", image: "coconut.png"));
+                LearningList.Add(new LearningItem(name: "Peach", image: "peach.png"));
+                LearningList.Add(new LearningItem(name: "Apricot", image: "apricot.png"));
+                LearningList.Add(new LearningItem(name: "Guava", image: "guava.png"));
                 break;
             case "animals":
                 LearningList.Add(new LearningItem(name: "Lion", image: "lion.png"));
@@ -95,10 +98,11 @@ public class Week04DetailViewModel : ObservableObject
                 LearningList.Add(new LearningItem(name: "Dog", image: "dog.png"));
                 LearningList.Add(new LearningItem(name: "Cat", image: "cat.png"));
                 LearningList.Add(new LearningItem(name: "Fox", image: "fox.png"));
-                LearningList.Add(new LearningItem(name: "Fish", image: "fish.png"));
-                LearningList.Add(new LearningItem(name: "Bird", image: "bird.png"));
-                LearningList.Add(new LearningItem(name: "Penguin", image: "penguin.png"));
-                LearningList.Add(new LearningItem(name: "Bear", image: "bear.png"));
+                LearningList.Add(new LearningItem(name: "Zebra", image: "zebra.png"));
+                LearningList.Add(new LearningItem(name: "Monkey", image: "monkey.png"));
+                LearningList.Add(new LearningItem(name: "Rabbit", image: "rabbit.png"));
+                LearningList.Add(new LearningItem(name: "Horse", image: "horse.png"));
+                LearningList.Add(new LearningItem(name: "Giraffe", image: "giraffe.png"));
                 break;
         }
     }

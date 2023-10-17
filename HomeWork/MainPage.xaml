@@ -12,6 +12,7 @@
             <!-- <Entry x:Name="Input" Placeholder="Input your name:" WidthRequest="200"></Entry> -->
             <Button Text="Week03" WidthRequest="200" Clicked="OnButtonClicked" CommandParameter="week03" />
             <Button Text="Week04" WidthRequest="200" Clicked="OnButtonClicked" CommandParameter="week04" />
+            <Button Text="Week05" WidthRequest="200" Clicked="OnButtonClicked" CommandParameter="week05" />
 
         </VerticalStackLayout>
     </ScrollView>
