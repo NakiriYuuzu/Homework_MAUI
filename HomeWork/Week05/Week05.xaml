@@ -2,8 +2,59 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Week05"
+             xmlns:week05="clr-namespace:HomeWork.Week05"
+             x:DataType="week05:Week05ViewModel"
              x:Class="HomeWork.Week05.Week05">
     <ContentPage.Content>
-        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="116" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <Label Grid.Row="0" Text="News Pilot" FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center" Padding="16, 16" />
+            
+            <CollectionView Grid.Row="1" ItemsSource="{Binding Categories}" Margin="16, 0, 16, 8">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="16" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="week05:Categories">
+                        <Frame Padding="16" WidthRequest="150" HeightRequest="100" BorderColor="Black">
+                            <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                <Image Source="{Binding Icon}" WidthRequest="50" HeightRequest="50" />
+                                <Label Text="{Binding Category}" VerticalTextAlignment="Center" />
+                            </VerticalStackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" CommandParameter="{Binding Category}"></TapGestureRecognizer>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            
+            <CollectionView Grid.Row="2" ItemsSource="{Binding Articles}" Margin="16, 8">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="16" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="week05:Article">
+                        <Frame BorderColor="Black" Padding="16">
+                            <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                <Image Source="{Binding Image}" Aspect="AspectFill" />
+                                <Label Text="{Binding Title}" FontSize="18" FontAttributes="Bold" Padding="0, 8" />
+                                <Label
+                                    Text="{Binding Content}" />
+                            </VerticalStackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnDetail_Clicked" CommandParameter="{Binding }"></TapGestureRecognizer>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

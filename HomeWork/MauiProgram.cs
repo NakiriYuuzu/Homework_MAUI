@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using HomeWork.Week05;
+using Microsoft.Extensions.Logging;
 
 namespace HomeWork;
 
@@ -15,10 +16,17 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
 
-#if DEBUG
-        builder.Logging.AddDebug();
-#endif
+        // Dependency Injection
+        builder.Services.AddSingleton<HttpClient>();
+        builder.Services.AddSingleton<NewsApiServices>();
 
-        return builder.Build();
+        // Logging
+        builder.Logging.AddDebug();
+
+        // Initialize ServiceHelper
+        var app = builder.Build();
+        ServiceHelper.Initialize(app.Services);
+
+        return app;
     }
 }

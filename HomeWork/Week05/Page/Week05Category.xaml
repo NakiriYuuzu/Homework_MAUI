@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Title}"
+             xmlns:week05="clr-namespace:HomeWork.Week05"
+             x:DataType="week05:Week05CategoryViewModel"
+             x:Class="HomeWork.Week05.Page.Week05Category">
+    <ContentPage.Content>
+        <Grid>
+            <CollectionView Margin="16, 0" ItemsSource="{Binding Articles}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="16" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="week05:Article">
+                        <Frame Padding="16" BorderColor="Black">
+                            <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                <Image Source="{Binding Image}" HeightRequest="80" />
+                                <VerticalStackLayout>
+                                    <Label Text="{Binding Title}" FontAttributes="Bold" />
+                                    <Label Text="{Binding Description}"/>
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Detail_OnClicked" CommandParameter="{Binding }"></TapGestureRecognizer>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

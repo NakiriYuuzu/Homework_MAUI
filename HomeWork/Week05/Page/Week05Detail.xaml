@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Article.Title}"
+             xmlns:week05="clr-namespace:HomeWork.Week05"
+             x:DataType="week05:Week05DetailViewModel"
+             x:Class="HomeWork.Week05.Page.Week05Detail">
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout Spacing="25" Padding="30">
+                <!-- 圖片 -->
+                <Image Source="{Binding Article.Image}"
+                       Aspect="AspectFill"
+                       HeightRequest="200" />
+
+                <!-- 標題 -->
+                <Label Text="{Binding Article.Title}"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center" />
+
+                <!-- 內容 -->
+                <Label
+                    Text="{Binding Article.Description}"
+                    FontSize="16"
+                    HorizontalOptions="Center"
+                    VerticalOptions="StartAndExpand" />
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
